@@ -1,6 +1,6 @@
 INSERT INTO employees (username, password, full_name, email, phone, position, role, active, created_at) VALUES 
-('admin', 'password', 'Administrator', 'admin@autodealer.com', '+1-555-000-0000', 'Admin', 'ROLE_ADMIN', true, CURRENT_TIMESTAMP),
-('manager', 'password', 'John Smith', 'john@autodealer.com', '+1-555-111-1111', 'Sales Manager', 'ROLE_EMPLOYEE', true, CURRENT_TIMESTAMP);
+('admin', '$2a$10$XUXEoDuGGZYKeMeV30xd6ON//ldi8oG1Gq4VOTMeZzadAR.XCdzWW', 'Administrator', 'admin@autodealer.com', '+1-555-000-0000', 'Admin', 'ROLE_ADMIN', true, CURRENT_TIMESTAMP),
+('manager', '$2a$10$XUXEoDuGGZYKeMeV30xd6ON//ldi8oG1Gq4VOTMeZzadAR.XCdzWW', 'John Smith', 'john@autodealer.com', '+1-555-111-1111', 'Sales Manager', 'ROLE_EMPLOYEE', true, CURRENT_TIMESTAMP);
 
 INSERT INTO suppliers (name, contact_person, email, phone, address, created_at) VALUES 
 ('AutoImport LLC', 'Peter Wilson', 'peter@autoimport.com', '+1-555-100-1000', 'New York, 5th Ave, 100', CURRENT_TIMESTAMP),
@@ -25,9 +25,9 @@ INSERT INTO price_list (car_model_id, production_year, base_price, pre_sale_prep
 (5, 2024, 3500000.00, 55000.00, 32000.00, 3587000.00, CURRENT_TIMESTAMP),
 (6, 2024, 1200000.00, 20000.00, 15000.00, 1235000.00, CURRENT_TIMESTAMP);
 
-INSERT INTO customers (full_name, email, phone, address, created_at) VALUES 
-('Robert Anderson', 'robert@email.com', '+1-555-400-4000', 'New York, Park Ave, 15', CURRENT_TIMESTAMP),
-('Jennifer Miller', 'jennifer@email.com', '+1-555-500-5000', 'Los Angeles, Beach Rd, 20', CURRENT_TIMESTAMP);
+INSERT INTO customers (full_name, email, phone, address, active, created_at) VALUES 
+('Robert Anderson', 'robert@email.com', '+1-555-400-4000', 'New York, Park Ave, 15', true, CURRENT_TIMESTAMP),
+('Jennifer Miller', 'jennifer@email.com', '+1-555-500-5000', 'Los Angeles, Beach Rd, 20', true, CURRENT_TIMESTAMP);
 
 INSERT INTO customer_requests (customer_name, email, phone, car_model_id, message, status, created_at, updated_at) VALUES 
 ('David Wilson', 'david@email.com', '+1-555-700-7000', 1, 'Interested in Toyota Camry in white. Is test drive available?', 'NEW', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),

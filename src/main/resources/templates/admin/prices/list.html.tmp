@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РџСЂР°Р№СЃ-Р»РёСЃС‚ - AutoDealer</title>
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+<body>
+<div class="admin-container">
+    <aside class="sidebar">
+        <h2>AutoDealer</h2>
+        <nav class="admin-nav">
+            <a data-th-href="@{/admin/dashboard}">РџР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ</a>
+            <a data-th-href="@{/admin/cars}">РњРѕРґРµР»Рё Р°РІС‚РѕРјРѕР±РёР»РµР№</a>
+            <a data-th-href="@{/admin/suppliers}">РџРѕСЃС‚Р°РІС‰РёРєРё</a>
+            <a data-th-href="@{/admin/prices}" class="active">РџСЂР°Р№СЃ-Р»РёСЃС‚</a>
+            <a data-th-href="@{/admin/customers}">РљР»РёРµРЅС‚С‹</a>
+            <a data-th-href="@{/admin/sales}">РџСЂРѕРґР°Р¶Рё</a>
+            <a data-th-href="@{/admin/employees}">РЎРѕС‚СЂСѓРґРЅРёРєРё</a>
+            <a data-th-href="@{/admin/requests}">Р—Р°РїСЂРѕСЃС‹</a>
+            <a data-th-href="@{/admin/analytics}">РђРЅР°Р»РёС‚РёРєР°</a>
+            <a data-th-href="@{/}">РџСѓР±Р»РёС‡РЅС‹Р№ СЃР°Р№С‚</a>
+            <a data-th-href="@{/logout}">Р’С‹Р№С‚Рё</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="content-header">
+            <h1>РџСЂР°Р№СЃ-Р»РёСЃС‚</h1>
+            <a data-th-href="@{/admin/prices/new}" class="btn btn-primary">Р”РѕР±Р°РІРёС‚СЊ С†РµРЅСѓ</a>
+        </header>
+
+        <table class="data-table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>РњРѕРґРµР»СЊ</th>
+                <th>Р“РѕРґ</th>
+                <th>Р‘Р°Р·РѕРІР°СЏ С†РµРЅР°</th>
+                <th>РџСЂРµРґРїСЂРѕРґР°Р¶РЅР°СЏ РїРѕРґРіРѕС‚РѕРІРєР°</th>
+                <th>РўСЂР°РЅСЃРїРѕСЂС‚</th>
+                <th>Р

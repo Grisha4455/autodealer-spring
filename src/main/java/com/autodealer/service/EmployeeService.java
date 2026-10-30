@@ -3,6 +3,7 @@ package com.autodealer.service;
 import com.autodealer.entity.Employee;
 import com.autodealer.repository.EmployeeRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 public class EmployeeService {
 
     private final EmployeeRepository employeeRepository;
+    private final PasswordEncoder passwordEncoder;
 
     public List<Employee> findAll() {
         return employeeRepository.findAll();
@@ -33,6 +35,9 @@ public class EmployeeService {
     }
 
     public Employee save(Employee employee) {
+        if (employee.getPassword() != null && !employee.getPassword().startsWith("$2")) {
+            employee.setPassword(passwordEncoder.encode(employee.getPassword()));
+        }
         return employeeRepository.save(employee);
     }
 

@@ -58,10 +58,10 @@
                         <td>
                             <form th:action="@{'/admin/service-appointments/' + ${appt.id} + '/status'}" method="post" style="display:inline;">
                                 <select name="status" onchange="this.form.submit()">
-                                    <option th:selected="${appt.status == 'Â îæèäàíèè'}" value="Â îæèäàíèè">Pending</option>
-                                    <option th:selected="${appt.status == 'Ïîäòâåðæäåíî'}" value="Ïîäòâåðæäåíî">Confirmed</option>
-                                    <option th:selected="${appt.status == 'Çàâåðøåíî'}" value="Çàâåðøåíî">Completed</option>
-                                    <option th:selected="${appt.status == 'Îòìåíåíî'}" value="Îòìåíåíî">Cancelled</option>
+                                    <option th:selected="${appt.status == 'Ð’ Ð¾Ð¶Ð¸Ð´Ð°Ð½Ð¸Ð¸'}" value="Ð’ Ð¾Ð¶Ð¸Ð´Ð°Ð½Ð¸Ð¸">Pending</option>
+                                    <option th:selected="${appt.status == 'ÐŸÐ¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´ÐµÐ½Ð¾'}" value="ÐŸÐ¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´ÐµÐ½Ð¾">Confirmed</option>
+                                    <option th:selected="${appt.status == 'Ð—Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð¾'}" value="Ð—Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð¾">Completed</option>
+                                    <option th:selected="${appt.status == 'ÐžÑ‚Ð¼ÐµÐ½ÐµÐ½Ð¾'}" value="ÐžÑ‚Ð¼ÐµÐ½ÐµÐ½Ð¾">Cancelled</option>
                                 </select>
                             </form>
                         </td>

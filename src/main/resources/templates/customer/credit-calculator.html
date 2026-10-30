@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="_csrf" th:content="${_csrf.token}">
+    <meta name="_csrf_header" th:content="${_csrf.headerName}">
     <title>Кредитный калькулятор - AutoDealer</title>
     <link rel="stylesheet" th:href="@{/css/admin.css}">
     <style>
@@ -121,7 +123,10 @@
 
         const response = await fetch('/customer/credit/calculate', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                [document.querySelector('meta[name="_csrf_header"]').content]: document.querySelector('meta[name="_csrf"]').content
+            },
             body: `price=${price}&downPayment=${downPayment}&rate=${rate}&months=${months}`
         });
 

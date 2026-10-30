@@ -36,7 +36,7 @@ public class AdminController {
         return "admin/dashboard";
     }
 
-    // Модели автомобилей
+    // РњРѕРґРµР»Рё Р°РІС‚РѕРјРѕР±РёР»РµР№
     @GetMapping("/cars")
     public String cars(Model model) {
         model.addAttribute("cars", carModelService.findAll());
@@ -75,7 +75,7 @@ public class AdminController {
         return "redirect:/admin/cars";
     }
 
-    // Поставщики
+    // РџРѕСЃС‚Р°РІС‰РёРєРё
     @GetMapping("/suppliers")
     public String suppliers(Model model) {
         model.addAttribute("suppliers", supplierService.findAll());
@@ -112,7 +112,7 @@ public class AdminController {
         return "redirect:/admin/suppliers";
     }
 
-    // Прейскурант
+    // РџСЂРµР№СЃРєСѓСЂР°РЅС‚
     @GetMapping("/prices")
     public String prices(Model model) {
         model.addAttribute("prices", priceListService.findAll());
@@ -151,7 +151,7 @@ public class AdminController {
         return "redirect:/admin/prices";
     }
 
-    // Клиенты
+    // РљР»РёРµРЅС‚С‹
     @GetMapping("/customers")
     public String customers(Model model) {
         model.addAttribute("customers", customerService.findAll());
@@ -179,7 +179,7 @@ public class AdminController {
         return "redirect:/admin/customers";
     }
 
-    // Продажи
+    // РџСЂРѕРґР°Р¶Рё
     @GetMapping("/sales")
     public String sales(Model model) {
         model.addAttribute("sales", saleService.findAll());
@@ -208,7 +208,7 @@ public class AdminController {
         return "admin/sales/details";
     }
 
-    // Сотрудники
+    // РЎРѕС‚СЂСѓРґРЅРёРєРё
     @GetMapping("/employees")
     public String employees(Model model) {
         model.addAttribute("employees", employeeService.findAll());
@@ -239,7 +239,7 @@ public class AdminController {
         return "redirect:/admin/employees";
     }
 
-    // Обращения
+    // РћР±СЂР°С‰РµРЅРёСЏ
     @GetMapping("/requests")
     public String requests(Model model) {
         model.addAttribute("requests", customerRequestService.findAll());
@@ -260,7 +260,7 @@ public class AdminController {
         return "redirect:/admin/requests";
     }
 
-    // Аналитика
+    // РђРЅР°Р»РёС‚РёРєР°
     @GetMapping("/analytics")
     public String analytics(Model model) {
         model.addAttribute("popularModels", saleService.getPopularModels());

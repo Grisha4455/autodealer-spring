@@ -19,7 +19,7 @@ public interface SaleRepository extends JpaRepository<Sale, Long> {
     @Query("SELECT s FROM Sale s ORDER BY s.saleDate DESC")
     List<Sale> findAllOrderByDateDesc();
     
-    // Аналитика
+    // РђРЅР°Р»РёС‚РёРєР°
     @Query("SELECT s.carModel.id, s.carModel.name, COUNT(s) as salesCount " +
            "FROM Sale s GROUP BY s.carModel.id, s.carModel.name ORDER BY salesCount DESC")
     List<Object[]> findPopularModels();

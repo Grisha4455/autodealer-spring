@@ -2,6 +2,13 @@
 
 Full-stack web application for managing a commercial car dealership with public catalog and admin panel.
 
+
+![Public catalog](docs/catalog.png)
+
+| Home page | Admin dashboard |
+|---|---|
+| ![Home](docs/home.png) | ![Admin](docs/admin.png) |
+
 ## Technology Stack
 
 - **Backend**: Java 17, Spring Boot 3.2.0
@@ -46,8 +53,10 @@ Access at: **http://localhost:8081**
 
 ### Default Credentials
 
-- Username: `admin`
-- Password: `admin123`
+- Admin: `admin` / `password`
+- Manager: `manager` / `password`
+
+Passwords are stored as BCrypt hashes (see `src/main/resources/import.sql`).
 
 ## Database Configuration
 
